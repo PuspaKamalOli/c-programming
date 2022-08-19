@@ -1,22 +1,19 @@
 
 #include <stdio.h>
-void find_sum();
-void find_sub();
-
-int main(){
-   
-    find_sub();
-     find_sum(8,9);
-    
+void pointer();
+int main()
+{
+    pointer();
+    return 0;
 }
-void find_sum(int a,int b){
-    printf("the sum is %d \n",a+b);
-}
-void find_sub(){
-    int a,b;
-    printf("enter subtractor: ");
-    scanf("%d",&a);
-    printf("enter the number to be subtracted: ");
-    scanf("%d",&b);
-    printf("the subtraction result is: %d\n",a-b);
+void pointer()
+{
+    int num = 90;
+    int *ptr = &num;
+    int num_1 = *ptr;
+    // print address of num variable
+    printf("%d \n", ptr);
+    // print value stored in the given location
+    printf("%d", *ptr);
+    printf("%d", num_1);
 }
